@@ -1,2 +1,2 @@
 # HexaMath
-a simple 2D hexa grid puzzle game made with godot and Wholffe
+A simple 2D Hexa Grid Puzzle Game made with godot and Wholffe and a Fox :O
