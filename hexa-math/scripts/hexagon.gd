@@ -26,7 +26,6 @@ func _process(_delta: float) -> void:
 func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.is_pressed():
 		Utils.player_add.emit(int(label.text))
-		print(self.label.text)
 
 func _on_mouse_entered() -> void:
 	sprite.frame = 4
