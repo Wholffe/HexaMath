@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=4 uid="uid://6jfah6v0vki1"]
+[gd_scene load_steps=8 format=3 uid="uid://6jfah6v0vki1"]
 
 [ext_resource type="PackedScene" uid="uid://c20wuk2lmfbrw" path="res://grid_elements/hexagon.tscn" id="1_xurn8"]
 [ext_resource type="Script" path="res://scripts/tile_set_parser.gd" id="2_oxxan"]
@@ -6,7 +6,6 @@
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_ktq5c"]
 scenes/1/scene = ExtResource("1_xurn8")
-scenes/2/scene = ExtResource("3_hsnqf")
 
 [sub_resource type="TileSet" id="TileSet_vy6uv"]
 tile_shape = 3
@@ -14,28 +13,25 @@ tile_offset_axis = 1
 tile_size = Vector2i(128, 128)
 sources/0 = SubResource("TileSetScenesCollectionSource_ktq5c")
 
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_raysv"]
+scenes/1/scene = ExtResource("3_hsnqf")
+
+[sub_resource type="TileSet" id="TileSet_0okkb"]
+tile_shape = 3
+tile_offset_axis = 1
+tile_size = Vector2i(128, 128)
+sources/0 = SubResource("TileSetScenesCollectionSource_raysv")
+
 [node name="TestLevel" type="Node2D"]
 
 [node name="TileMapLayers" type="Node2D" parent="."]
 script = ExtResource("2_oxxan")
 
-[node name="Layer0" type="TileMapLayer" parent="TileMapLayers"]
+[node name="NonPlayerLayer" type="TileMapLayer" parent="TileMapLayers"]
 use_parent_material = true
-tile_map_data = PackedByteArray("AAAAAAEAAAAAAAAAAQABAAEAAAAAAAAAAQACAAEAAAAAAAAAAQABAAAAAAAAAAAAAgADAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQA=")
+tile_map_data = PackedByteArray(0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 2, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0)
 tile_set = SubResource("TileSet_vy6uv")
 
-[connection signal="input_event" from="TileMapLayers/Layer0/HexagonNode2D" to="TileMapLayers/Layer0/HexagonNode2D" method="_on_input_event"]
-[connection signal="mouse_entered" from="TileMapLayers/Layer0/HexagonNode2D" to="TileMapLayers/Layer0/HexagonNode2D" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="TileMapLayers/Layer0/HexagonNode2D" to="TileMapLayers/Layer0/HexagonNode2D" method="_on_mouse_exited"]
-[connection signal="input_event" from="TileMapLayers/Layer0/@Area2D@43761" to="TileMapLayers/Layer0/@Area2D@43761" method="_on_input_event"]
-[connection signal="mouse_entered" from="TileMapLayers/Layer0/@Area2D@43761" to="TileMapLayers/Layer0/@Area2D@43761" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="TileMapLayers/Layer0/@Area2D@43761" to="TileMapLayers/Layer0/@Area2D@43761" method="_on_mouse_exited"]
-[connection signal="input_event" from="TileMapLayers/Layer0/@Area2D@43762" to="TileMapLayers/Layer0/@Area2D@43762" method="_on_input_event"]
-[connection signal="mouse_entered" from="TileMapLayers/Layer0/@Area2D@43762" to="TileMapLayers/Layer0/@Area2D@43762" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="TileMapLayers/Layer0/@Area2D@43762" to="TileMapLayers/Layer0/@Area2D@43762" method="_on_mouse_exited"]
-[connection signal="input_event" from="TileMapLayers/Layer0/@Area2D@43763" to="TileMapLayers/Layer0/@Area2D@43763" method="_on_input_event"]
-[connection signal="mouse_entered" from="TileMapLayers/Layer0/@Area2D@43763" to="TileMapLayers/Layer0/@Area2D@43763" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="TileMapLayers/Layer0/@Area2D@43763" to="TileMapLayers/Layer0/@Area2D@43763" method="_on_mouse_exited"]
-[connection signal="input_event" from="TileMapLayers/Layer0/@Area2D@43764" to="TileMapLayers/Layer0/@Area2D@43764" method="_on_input_event"]
-[connection signal="mouse_entered" from="TileMapLayers/Layer0/@Area2D@43764" to="TileMapLayers/Layer0/@Area2D@43764" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="TileMapLayers/Layer0/@Area2D@43764" to="TileMapLayers/Layer0/@Area2D@43764" method="_on_mouse_exited"]
+[node name="PlayerLayer" type="TileMapLayer" parent="TileMapLayers"]
+tile_map_data = PackedByteArray(0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0)
+tile_set = SubResource("TileSet_0okkb")
