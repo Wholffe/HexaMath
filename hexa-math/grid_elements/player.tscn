@@ -26,3 +26,7 @@ offset_bottom = 41.0
 [node name="NumberLabel" type="Label" parent="CenterContainer"]
 layout_mode = 2
 text = "<Number>"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position_smoothing_enabled = true
+position_smoothing_speed = 50.0

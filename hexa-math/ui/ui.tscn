@@ -25,7 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://78vbb7clyrec" path="res://assets/YellowButtons/Yellow/ButtonsBig [Hover]/Button-5.png" id="23_uwgyr"]
 [ext_resource type="Texture2D" uid="uid://c4gisreid7d0m" path="res://assets/YellowButtons/Yellow/ButtonsBig [Disabled]/Button-5.png" id="24_cesil"]
 
-[node name="Control" type="Control"]
+[node name="User Interface" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
