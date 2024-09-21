@@ -35,3 +35,9 @@ tile_set = SubResource("TileSet_vy6uv")
 [node name="PlayerLayer" type="TileMapLayer" parent="TileMapLayers"]
 tile_map_data = PackedByteArray(0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0)
 tile_set = SubResource("TileSet_0okkb")
+
+[node name="HexagonNode2D" parent="TileMapLayers" instance=ExtResource("1_xurn8")]
+position = Vector2(448, 320)
+
+[node name="HexagonNode2D2" parent="TileMapLayers" instance=ExtResource("1_xurn8")]
+position = Vector2(352, 256)

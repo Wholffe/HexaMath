@@ -25,7 +25,9 @@
 [ext_resource type="Texture2D" uid="uid://78vbb7clyrec" path="res://assets/YellowButtons/Yellow/ButtonsBig [Hover]/Button-5.png" id="23_uwgyr"]
 [ext_resource type="Texture2D" uid="uid://c4gisreid7d0m" path="res://assets/YellowButtons/Yellow/ButtonsBig [Disabled]/Button-5.png" id="24_cesil"]
 
-[node name="User Interface" type="Control"]
+[node name="UI" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -33,15 +35,19 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="Control"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
 
-[node name="HBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="Operators" type="VBoxContainer" parent="Control/MarginContainer"]
 y_sort_enabled = true
 layout_mode = 2
 size_flags_horizontal = 8
@@ -50,154 +56,108 @@ size_flags_stretch_ratio = 0.0
 mouse_default_cursor_shape = 2
 theme_override_constants/separation = 10
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer/Operators"]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer/Operators/VBoxContainer"]
 layout_mode = 2
 size_flags_stretch_ratio = 3.79
 
-[node name="TextureButton" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+[node name="TextureButton" type="TextureButton" parent="Control/MarginContainer/Operators/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 texture_normal = ExtResource("1_3uveh")
 texture_hover = ExtResource("1_bno7r")
 texture_disabled = ExtResource("3_bd76g")
 
-[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
-visible = false
-layout_mode = 2
-text = "Add"
-
-[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+[node name="VBoxContainer2" type="VBoxContainer" parent="Control/MarginContainer/Operators"]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer2"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer/Operators/VBoxContainer2"]
 layout_mode = 2
 
-[node name="TextureButton" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer"]
+[node name="TextureButton" type="TextureButton" parent="Control/MarginContainer/Operators/VBoxContainer2/HBoxContainer"]
 layout_mode = 2
 texture_normal = ExtResource("4_6egga")
 texture_hover = ExtResource("2_lmt13")
 texture_disabled = ExtResource("6_o5opn")
 
-[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer"]
-visible = false
-layout_mode = 2
-text = "Subtract"
-
-[node name="VBoxContainer3" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+[node name="VBoxContainer3" type="VBoxContainer" parent="Control/MarginContainer/Operators"]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer3"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer/Operators/VBoxContainer3"]
 layout_mode = 2
 
-[node name="TextureButton" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer3/HBoxContainer"]
+[node name="TextureButton" type="TextureButton" parent="Control/MarginContainer/Operators/VBoxContainer3/HBoxContainer"]
 layout_mode = 2
 texture_normal = ExtResource("7_n4qm4")
 texture_hover = ExtResource("3_y554g")
 texture_disabled = ExtResource("9_4udy1")
 
-[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer3/HBoxContainer"]
-visible = false
-layout_mode = 2
-text = "Multiply"
-
-[node name="VBoxContainer4" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+[node name="VBoxContainer4" type="VBoxContainer" parent="Control/MarginContainer/Operators"]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer4"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer/Operators/VBoxContainer4"]
 layout_mode = 2
 
-[node name="TextureButton" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer4/HBoxContainer"]
+[node name="TextureButton" type="TextureButton" parent="Control/MarginContainer/Operators/VBoxContainer4/HBoxContainer"]
 layout_mode = 2
 texture_normal = ExtResource("10_awmo3")
 texture_hover = ExtResource("11_v0xfo")
 texture_disabled = ExtResource("12_0epji")
 
-[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer4/HBoxContainer"]
-visible = false
-layout_mode = 2
-text = "Devide"
-
-[node name="VBoxContainer5" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+[node name="VBoxContainer5" type="VBoxContainer" parent="Control/MarginContainer/Operators"]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer5"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer/Operators/VBoxContainer5"]
 layout_mode = 2
 
-[node name="TextureButton" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer5/HBoxContainer"]
+[node name="TextureButton" type="TextureButton" parent="Control/MarginContainer/Operators/VBoxContainer5/HBoxContainer"]
 layout_mode = 2
 texture_normal = ExtResource("13_byqwr")
 texture_hover = ExtResource("5_pgbj4")
 texture_disabled = ExtResource("15_cqruk")
 
-[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer5/HBoxContainer"]
-visible = false
-layout_mode = 2
-text = "Square"
-
-[node name="VBoxContainer6" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+[node name="VBoxContainer6" type="VBoxContainer" parent="Control/MarginContainer/Operators"]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer6"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer/Operators/VBoxContainer6"]
 layout_mode = 2
 
-[node name="TextureButton" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer6/HBoxContainer"]
+[node name="TextureButton" type="TextureButton" parent="Control/MarginContainer/Operators/VBoxContainer6/HBoxContainer"]
 layout_mode = 2
 texture_normal = ExtResource("16_4cf0l")
 texture_hover = ExtResource("6_nn501")
 texture_disabled = ExtResource("18_1rxe6")
 
-[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer6/HBoxContainer"]
-visible = false
-layout_mode = 2
-text = "Combine"
-
-[node name="Label" type="Label" parent="MarginContainer/HBoxContainer"]
-layout_mode = 2
-text = "                    "
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="Menu" type="VBoxContainer" parent="Control/MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer/Menu"]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer/Menu/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 0
 
-[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-text = "   "
-
-[node name="TextureButton" type="TextureButton" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="TextureButton" type="TextureButton" parent="Control/MarginContainer/Menu/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_stretch_ratio = 0.0
 texture_normal = ExtResource("19_i4wxw")
 texture_hover = ExtResource("20_p3bwf")
 texture_disabled = ExtResource("21_etldk")
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
-layout_mode = 2
-text = "  "
-
-[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer"]
+[node name="Reset" type="HBoxContainer" parent="Control/MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer2"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer/Reset"]
 layout_mode = 2
 
-[node name="Label3" type="Label" parent="MarginContainer/HBoxContainer2/VBoxContainer"]
-layout_mode = 2
-text = "  "
-
-[node name="TextureButton" type="TextureButton" parent="MarginContainer/HBoxContainer2/VBoxContainer"]
+[node name="TextureButton" type="TextureButton" parent="Control/MarginContainer/Reset/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -205,12 +165,5 @@ texture_normal = ExtResource("22_mujfp")
 texture_hover = ExtResource("23_uwgyr")
 texture_disabled = ExtResource("24_cesil")
 
-[node name="Label" type="Label" parent="MarginContainer/HBoxContainer2/VBoxContainer"]
-visible = false
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer"]
 layout_mode = 2
-size_flags_horizontal = 4
-text = "  One Step Back"
-
-[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer2/VBoxContainer"]
-layout_mode = 2
-text = "                          "

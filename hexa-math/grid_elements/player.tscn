@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://s4xogb4x557x"]
+[gd_scene load_steps=4 format=3 uid="uid://s4xogb4x557x"]
 
 [ext_resource type="Texture2D" uid="uid://dfpaskx1lkil7" path="res://assets/Terrain - Solid Flat - 2px Outline (White ) - 128x128.png" id="1_42lcx"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_cerf0"]
+[ext_resource type="PackedScene" uid="uid://0wcraqo1j4bx" path="res://ui/ui.tscn" id="3_utvq5"]
 
 [node name="Player" type="Area2D"]
 script = ExtResource("1_cerf0")
@@ -30,3 +31,5 @@ text = "<Number>"
 [node name="Camera2D" type="Camera2D" parent="."]
 position_smoothing_enabled = true
 position_smoothing_speed = 50.0
+
+[node name="User Interface" parent="." instance=ExtResource("3_utvq5")]
