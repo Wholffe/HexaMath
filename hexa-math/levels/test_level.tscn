@@ -1,56 +1,30 @@
-[gd_scene load_steps=9 format=3 uid="uid://6jfah6v0vki1"]
+[gd_scene load_steps=4 format=3 uid="uid://6jfah6v0vki1"]
 
 [ext_resource type="PackedScene" uid="uid://c20wuk2lmfbrw" path="res://grid_elements/hexagon.tscn" id="1_xurn8"]
-[ext_resource type="Script" path="res://scripts/tile_set_parser.gd" id="2_oxxan"]
 [ext_resource type="PackedScene" uid="uid://s4xogb4x557x" path="res://grid_elements/player.tscn" id="3_hsnqf"]
 [ext_resource type="PackedScene" uid="uid://0wcraqo1j4bx" path="res://ui/ui.tscn" id="4_ns2wa"]
 
-[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_ktq5c"]
-scenes/1/scene = ExtResource("1_xurn8")
-
-[sub_resource type="TileSet" id="TileSet_vy6uv"]
-tile_shape = 3
-tile_offset_axis = 1
-tile_size = Vector2i(128, 128)
-sources/0 = SubResource("TileSetScenesCollectionSource_ktq5c")
-
-[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_raysv"]
-scenes/1/scene = ExtResource("3_hsnqf")
-
-[sub_resource type="TileSet" id="TileSet_0okkb"]
-tile_shape = 3
-tile_offset_axis = 1
-tile_size = Vector2i(128, 128)
-sources/0 = SubResource("TileSetScenesCollectionSource_raysv")
-
 [node name="TestLevel" type="Node2D"]
-
-[node name="TileMapLayers" type="Node2D" parent="."]
-script = ExtResource("2_oxxan")
-
-[node name="NonPlayerLayer" type="TileMapLayer" parent="TileMapLayers"]
-use_parent_material = true
-tile_map_data = PackedByteArray(0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 2, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0)
-tile_set = SubResource("TileSet_vy6uv")
-
-[node name="PlayerLayer" type="TileMapLayer" parent="TileMapLayers"]
-tile_map_data = PackedByteArray(0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0)
-tile_set = SubResource("TileSet_0okkb")
 
 [node name="UI" parent="." instance=ExtResource("4_ns2wa")]
 
-[connection signal="input_event" from="TileMapLayers/NonPlayerLayer/HexagonNode2D" to="TileMapLayers/NonPlayerLayer/HexagonNode2D" method="_on_input_event"]
-[connection signal="mouse_entered" from="TileMapLayers/NonPlayerLayer/HexagonNode2D" to="TileMapLayers/NonPlayerLayer/HexagonNode2D" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="TileMapLayers/NonPlayerLayer/HexagonNode2D" to="TileMapLayers/NonPlayerLayer/HexagonNode2D" method="_on_mouse_exited"]
-[connection signal="input_event" from="TileMapLayers/NonPlayerLayer/@Area2D@66562" to="TileMapLayers/NonPlayerLayer/@Area2D@66562" method="_on_input_event"]
-[connection signal="mouse_entered" from="TileMapLayers/NonPlayerLayer/@Area2D@66562" to="TileMapLayers/NonPlayerLayer/@Area2D@66562" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="TileMapLayers/NonPlayerLayer/@Area2D@66562" to="TileMapLayers/NonPlayerLayer/@Area2D@66562" method="_on_mouse_exited"]
-[connection signal="input_event" from="TileMapLayers/NonPlayerLayer/@Area2D@66563" to="TileMapLayers/NonPlayerLayer/@Area2D@66563" method="_on_input_event"]
-[connection signal="mouse_entered" from="TileMapLayers/NonPlayerLayer/@Area2D@66563" to="TileMapLayers/NonPlayerLayer/@Area2D@66563" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="TileMapLayers/NonPlayerLayer/@Area2D@66563" to="TileMapLayers/NonPlayerLayer/@Area2D@66563" method="_on_mouse_exited"]
-[connection signal="input_event" from="TileMapLayers/NonPlayerLayer/@Area2D@66564" to="TileMapLayers/NonPlayerLayer/@Area2D@66564" method="_on_input_event"]
-[connection signal="mouse_entered" from="TileMapLayers/NonPlayerLayer/@Area2D@66564" to="TileMapLayers/NonPlayerLayer/@Area2D@66564" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="TileMapLayers/NonPlayerLayer/@Area2D@66564" to="TileMapLayers/NonPlayerLayer/@Area2D@66564" method="_on_mouse_exited"]
-[connection signal="input_event" from="TileMapLayers/NonPlayerLayer/@Area2D@66565" to="TileMapLayers/NonPlayerLayer/@Area2D@66565" method="_on_input_event"]
-[connection signal="mouse_entered" from="TileMapLayers/NonPlayerLayer/@Area2D@66565" to="TileMapLayers/NonPlayerLayer/@Area2D@66565" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="TileMapLayers/NonPlayerLayer/@Area2D@66565" to="TileMapLayers/NonPlayerLayer/@Area2D@66565" method="_on_mouse_exited"]
+[node name="Player" parent="." instance=ExtResource("3_hsnqf")]
+position = Vector2(224, 136)
+current_number = 10
+
+[node name="Startfields" type="Node2D" parent="."]
+position = Vector2(320, 200)
+
+[node name="HexagonNode2D2" parent="Startfields" instance=ExtResource("1_xurn8")]
+position = Vector2(0, -128)
+random_value = false
+current_number = 10
+
+[node name="HexagonNode2D3" parent="Startfields" instance=ExtResource("1_xurn8")]
+position = Vector2(96, -64)
+random_value = false
+current_number = 11
+
+[node name="HexagonNode2D" parent="Startfields" instance=ExtResource("1_xurn8")]
+random_value = false
+current_number = 12

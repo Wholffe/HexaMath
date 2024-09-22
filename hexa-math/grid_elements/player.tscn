@@ -29,4 +29,3 @@ text = "<Number>"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position_smoothing_enabled = true
-position_smoothing_speed = 50.0

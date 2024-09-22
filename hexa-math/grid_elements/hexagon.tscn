@@ -23,7 +23,7 @@ offset_bottom = 41.0
 
 [node name="NumberLabel" type="Label" parent="CenterContainer"]
 layout_mode = 2
-text = "Number"
+text = "<Number>"
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
