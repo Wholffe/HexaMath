@@ -30,15 +30,23 @@ func move_to_player() -> void:
 	self.position = Utils.player_position
 
 func _on_mouse_entered() -> void:
-	sprite.frame = HOVER_FRAME
-	is_clickable = true
+	if is_clickable:
+		sprite.frame = HOVER_FRAME
 
 func _on_mouse_exited() -> void:
-	sprite.frame = BASE_FRAME
-	is_clickable = false
+	if is_clickable:
+		sprite.frame = BASE_FRAME
 
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	if event.is_action_pressed("left_click"):
+	if event.is_action_pressed("left_click") and is_clickable:
 		Utils.player_add.emit(self.current_number)
 		Utils.move_player_to.emit(self.position)
 		queue_free()
+
+func _on_area_entered(area: Area2D) -> void:
+	if area.is_in_group("player"):
+		is_clickable = true
+
+func _on_area_exited(area: Area2D) -> void:
+	if area.is_in_group("player"):
+		is_clickable = false
