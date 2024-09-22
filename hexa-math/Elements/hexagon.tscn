@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://c20wuk2lmfbrw"]
+
+[ext_resource type="Script" path="res://Scripts/hexagon.gd" id="1_2o1l7"]
+[ext_resource type="Texture2D" uid="uid://dfpaskx1lkil7" path="res://Assets/Terrain - Solid Flat - 2px Outline (White ) - 128x128.png" id="2_ahk1i"]
+
+[node name="HexagonNode2D" type="Area2D"]
+script = ExtResource("1_2o1l7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_ahk1i")
+hframes = 4
+vframes = 2
+frame = 3
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-31, 63, 31, 63, 63, 0, 31, -63, -31, -63, -63, 0)
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+offset_left = -42.0
+offset_top = -41.0
+offset_right = 42.0
+offset_bottom = 41.0
+
+[node name="NumberLabel" type="Label" parent="CenterContainer"]
+layout_mode = 2
+text = "<Number>"
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]
+[connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
