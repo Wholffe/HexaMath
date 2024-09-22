@@ -8,23 +8,23 @@
 
 [node name="UI" parent="." instance=ExtResource("4_ns2wa")]
 
-[node name="Player" parent="." instance=ExtResource("3_hsnqf")]
-position = Vector2(224, 136)
-current_number = 10
-
-[node name="Startfields" type="Node2D" parent="."]
+[node name="LevelElements" type="Node2D" parent="."]
 position = Vector2(320, 200)
 
-[node name="HexagonNode2D2" parent="Startfields" instance=ExtResource("1_xurn8")]
+[node name="HexagonNode2D2" parent="LevelElements" instance=ExtResource("1_xurn8")]
 position = Vector2(0, -128)
 random_value = false
 current_number = 10
 
-[node name="HexagonNode2D3" parent="Startfields" instance=ExtResource("1_xurn8")]
+[node name="HexagonNode2D3" parent="LevelElements" instance=ExtResource("1_xurn8")]
 position = Vector2(96, -64)
 random_value = false
 current_number = 11
 
-[node name="HexagonNode2D" parent="Startfields" instance=ExtResource("1_xurn8")]
+[node name="HexagonNode2D" parent="LevelElements" instance=ExtResource("1_xurn8")]
 random_value = false
 current_number = 12
+
+[node name="Player" parent="LevelElements" instance=ExtResource("3_hsnqf")]
+position = Vector2(-96, -64)
+current_number = 10

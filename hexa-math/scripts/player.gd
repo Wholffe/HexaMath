@@ -17,11 +17,11 @@ func player_add(value: int):
 	current_number += value
 	
 func move_player_to(position: Vector2):
-	create_new_hexagon(self.global_position)
-	self.global_position = position
+	create_new_hexagon(self.position)
+	self.position = position
 
 func create_new_hexagon(position: Vector2i):
 	var new_hexagon = preload("res://grid_elements/hexagon.tscn")
 	var new_hexagon_instance = new_hexagon.instantiate()
-	new_hexagon_instance.global_position = self.global_position
+	new_hexagon_instance.position = self.position
 	get_parent().add_child(new_hexagon_instance)

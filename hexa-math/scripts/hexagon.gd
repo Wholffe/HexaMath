@@ -27,7 +27,7 @@ func get_random_number() -> int:
 	return rng.randi_range(MIN_NUMBER,MAX_NUMBER)
 
 func move_to_player() -> void:
-	self.global_position = Utils.player_position
+	self.position = Utils.player_position
 
 func _on_mouse_entered() -> void:
 	sprite.frame = HOVER_FRAME
@@ -40,5 +40,5 @@ func _on_mouse_exited() -> void:
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event.is_action_pressed("left_click"):
 		Utils.player_add.emit(self.current_number)
-		Utils.move_player_to.emit(self.global_position)
+		Utils.move_player_to.emit(self.position)
 		queue_free()
