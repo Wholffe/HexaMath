@@ -19,15 +19,14 @@ func _ready() -> void:
 
 func set_starting_label() -> void:
 	if random_value:
-		number_label.text = str(get_random_number())
-	else:
-		number_label.text = str(current_number)
+		current_number = get_random_number()
+	number_label.text = str(current_number)
 
 func get_random_number() -> int:
 	return rng.randi_range(MIN_NUMBER,MAX_NUMBER)
 
 func move_to_player() -> void:
-	self.position = Utils.player_position
+	position = Utils.player_position
 
 func _on_mouse_entered() -> void:
 	if is_clickable:
@@ -39,8 +38,8 @@ func _on_mouse_exited() -> void:
 
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event.is_action_pressed("left_click") and is_clickable:
-		Utils.player_add.emit(self.current_number)
-		Utils.move_player_to.emit(self.position)
+		Utils.handle_player_operation.emit(current_number)
+		Utils.move_player_to.emit(position)
 		queue_free()
 
 func _on_area_entered(area: Area2D) -> void:

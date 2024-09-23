@@ -1,7 +1,8 @@
-[gd_scene load_steps=25 format=3 uid="uid://0wcraqo1j4bx"]
+[gd_scene load_steps=26 format=3 uid="uid://0wcraqo1j4bx"]
 
 [ext_resource type="Texture2D" uid="uid://bkefwjs3s78i3" path="res://Assets/UIElements/Yellow/ButtonsBig [Normal]/Button3.png" id="1_3uveh"]
 [ext_resource type="Texture2D" uid="uid://bomc5txoavt5v" path="res://Assets/UIElements/Yellow/ButtonsBig [Hover]/Button-2.png" id="1_bno7r"]
+[ext_resource type="Script" path="res://Scripts/ui.gd" id="1_mqls5"]
 [ext_resource type="Texture2D" uid="uid://bmkfluu5f3p10" path="res://Assets/UIElements/Yellow/ButtonsBig [Hover]/Button-3.png" id="2_lmt13"]
 [ext_resource type="Texture2D" uid="uid://qtx2pqvc07ll" path="res://Assets/UIElements/Yellow/ButtonsBig [Disabled]/Button-2.png" id="3_bd76g"]
 [ext_resource type="Texture2D" uid="uid://twtrjtefd8ja" path="res://Assets/UIElements/Yellow/ButtonsBig [Hover]/Button-1.png" id="3_y554g"]
@@ -26,6 +27,7 @@
 [ext_resource type="Texture2D" uid="uid://c4gisreid7d0m" path="res://Assets/UIElements/Yellow/ButtonsBig [Disabled]/Button-5.png" id="24_cesil"]
 
 [node name="UI" type="CanvasLayer"]
+script = ExtResource("1_mqls5")
 
 [node name="UIRight" type="Control" parent="."]
 layout_mode = 3
@@ -83,13 +85,13 @@ texture_normal = ExtResource("10_awmo3")
 texture_hover = ExtResource("11_v0xfo")
 texture_disabled = ExtResource("12_0epji")
 
-[node name="CombineButton" type="TextureButton" parent="UIRight/MarginContainer/Operators"]
+[node name="SquareButton" type="TextureButton" parent="UIRight/MarginContainer/Operators"]
 layout_mode = 2
 texture_normal = ExtResource("13_byqwr")
 texture_hover = ExtResource("5_pgbj4")
 texture_disabled = ExtResource("15_cqruk")
 
-[node name="WhatIsThisButton" type="TextureButton" parent="UIRight/MarginContainer/Operators"]
+[node name="CombineButton" type="TextureButton" parent="UIRight/MarginContainer/Operators"]
 layout_mode = 2
 texture_normal = ExtResource("16_4cf0l")
 texture_hover = ExtResource("6_nn501")
@@ -133,3 +135,10 @@ size_flags_vertical = 4
 texture_normal = ExtResource("22_mujfp")
 texture_hover = ExtResource("23_uwgyr")
 texture_disabled = ExtResource("24_cesil")
+
+[connection signal="pressed" from="UIRight/MarginContainer/Operators/PlusButton" to="." method="_on_plus_button_pressed"]
+[connection signal="pressed" from="UIRight/MarginContainer/Operators/MinusButton" to="." method="_on_minus_button_pressed"]
+[connection signal="pressed" from="UIRight/MarginContainer/Operators/MultiplyButton" to="." method="_on_multiply_button_pressed"]
+[connection signal="pressed" from="UIRight/MarginContainer/Operators/DivideButton" to="." method="_on_divide_button_pressed"]
+[connection signal="pressed" from="UIRight/MarginContainer/Operators/SquareButton" to="." method="_on_square_button_pressed"]
+[connection signal="pressed" from="UIRight/MarginContainer/Operators/CombineButton" to="." method="_on_combine_button_pressed"]
