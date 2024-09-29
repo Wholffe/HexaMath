@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfpaskx1lkil7"
-path="res://.godot/imported/Terrain - Solid Flat - 2px Outline (White ) - 128x128.png-50c222a5559bea7813cd3a2a9bc49d40.ctex"
+uid="uid://bjgiqiig2qi8p"
+path="res://.godot/imported/Button-16.png-7e0d2ba296f60df86145c8c1581efbff.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Terrain - Solid Flat - 2px Outline (White ) - 128x128.png"
-dest_files=["res://.godot/imported/Terrain - Solid Flat - 2px Outline (White ) - 128x128.png-50c222a5559bea7813cd3a2a9bc49d40.ctex"]
+source_file="res://assets/uielements/Yellow/ButtonsMiddle [Hover]/Button-16.png"
+dest_files=["res://.godot/imported/Button-16.png-7e0d2ba296f60df86145c8c1581efbff.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfpaskx1lkil7"
-path="res://.godot/imported/Terrain - Solid Flat - 2px Outline (White ) - 128x128.png-50c222a5559bea7813cd3a2a9bc49d40.ctex"
+uid="uid://41vccl3ewnuc"
+path="res://.godot/imported/Bar1.png-14264fdea7ae2cb6a8669398b591be3c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Terrain - Solid Flat - 2px Outline (White ) - 128x128.png"
-dest_files=["res://.godot/imported/Terrain - Solid Flat - 2px Outline (White ) - 128x128.png-50c222a5559bea7813cd3a2a9bc49d40.ctex"]
+source_file="res://assets/uielements/Yellow/Bars2/Bar1.png"
+dest_files=["res://.godot/imported/Bar1.png-14264fdea7ae2cb6a8669398b591be3c.ctex"]
 
 [params]
 

@@ -46,7 +46,7 @@ func move_player_to(position: Vector2) -> void:
 	self.position = position
 
 func create_new_hexagon_on_player_pos() -> void:
-	var new_hexagon = preload("res://Elements/hexagon.tscn")
+	var new_hexagon = preload("res://elements/hexagon.tscn")
 	var new_hexagon_instance = new_hexagon.instantiate()
 	new_hexagon_instance.position = self.position
 	get_parent().add_child(new_hexagon_instance)
