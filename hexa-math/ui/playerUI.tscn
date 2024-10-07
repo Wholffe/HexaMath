@@ -1,0 +1,199 @@
+[gd_scene load_steps=27 format=3 uid="uid://0wcraqo1j4bx"]
+
+[ext_resource type="Script" path="res://Scripts/ui.gd" id="1_usla4"]
+[ext_resource type="Texture2D" uid="uid://bkefwjs3s78i3" path="res://assets/uielements/Yellow/ButtonsBig [Normal]/Button3.png" id="2_x8tn3"]
+[ext_resource type="Texture2D" uid="uid://bomc5txoavt5v" path="res://assets/uielements/Yellow/ButtonsBig [Hover]/Button-2.png" id="3_xv41u"]
+[ext_resource type="Texture2D" uid="uid://qtx2pqvc07ll" path="res://assets/uielements/Yellow/ButtonsBig [Disabled]/Button-2.png" id="4_pyjd3"]
+[ext_resource type="Texture2D" uid="uid://b24mbbh6p880s" path="res://assets/uielements/Yellow/ButtonsBig [Normal]/Button4.png" id="5_nc06r"]
+[ext_resource type="Texture2D" uid="uid://bmkfluu5f3p10" path="res://assets/uielements/Yellow/ButtonsBig [Hover]/Button-3.png" id="6_lqtkj"]
+[ext_resource type="Texture2D" uid="uid://dmpodupd53g36" path="res://assets/uielements/Yellow/ButtonsBig [Disabled]/Button-3.png" id="7_fwcia"]
+[ext_resource type="Texture2D" uid="uid://b0vbhvvwkf66v" path="res://assets/uielements/Yellow/ButtonsBig [Normal]/Button2.png" id="8_cpju5"]
+[ext_resource type="Texture2D" uid="uid://twtrjtefd8ja" path="res://assets/uielements/Yellow/ButtonsBig [Hover]/Button-1.png" id="9_81bp8"]
+[ext_resource type="Texture2D" uid="uid://coe7stjiktkqb" path="res://assets/uielements/Yellow/ButtonsBig [Disabled]/Button-1.png" id="10_b6fqr"]
+[ext_resource type="Texture2D" uid="uid://cnatwixywhkwy" path="res://assets/uielements/Yellow/Button-Self-Devide-Normal.png" id="11_ovjtt"]
+[ext_resource type="Texture2D" uid="uid://bc0l07a63t6vo" path="res://assets/uielements/Yellow/Button-Self-Devide-Hover.png" id="12_hnswv"]
+[ext_resource type="Texture2D" uid="uid://cqyssmoixksr8" path="res://assets/uielements/Yellow/Button-Self-Devide-Disabled.png" id="13_n22tv"]
+[ext_resource type="Texture2D" uid="uid://dkqj3cn3cl67o" path="res://assets/uielements/Yellow/ButtonsBig [Normal]/Button14.png" id="14_tkexi"]
+[ext_resource type="Texture2D" uid="uid://celbqdg72pmh8" path="res://assets/uielements/Yellow/ButtonsBig [Hover]/Button-12.png" id="15_81e3p"]
+[ext_resource type="Texture2D" uid="uid://rvr8j1ucq0e6" path="res://assets/uielements/Yellow/ButtonsBig [Disabled]/Button-12.png" id="16_nkn1w"]
+[ext_resource type="Texture2D" uid="uid://mbpcmvfcj3a4" path="res://assets/uielements/Yellow/ButtonsBig [Normal]/Button16.png" id="17_55ayu"]
+[ext_resource type="Texture2D" uid="uid://dv5mh5bve8vbe" path="res://assets/uielements/Yellow/ButtonsBig [Hover]/Button-14.png" id="18_6e1r4"]
+[ext_resource type="Texture2D" uid="uid://cekotsrqgmmvq" path="res://assets/uielements/Yellow/ButtonsBig [Disabled]/Button-14.png" id="19_rq33v"]
+[ext_resource type="Texture2D" uid="uid://cumaxkam0uhke" path="res://assets/uielements/Yellow/ButtonsBig [Normal]/Button5.png" id="20_wwn7d"]
+[ext_resource type="Texture2D" uid="uid://cwedg7lroa5eu" path="res://assets/uielements/Yellow/ButtonsBig [Hover]/Button-4.png" id="21_ppstp"]
+[ext_resource type="Texture2D" uid="uid://cj5vmt4bmojmj" path="res://assets/uielements/Yellow/ButtonsBig [Disabled]/Button-4.png" id="22_xhf5r"]
+[ext_resource type="Texture2D" uid="uid://bpj6mxcvea6ak" path="res://assets/uielements/Yellow/ButtonsMiddle [Normal]/Button-9.png" id="23_2lk1q"]
+[ext_resource type="Texture2D" uid="uid://bygtb50bgjkhh" path="res://assets/uielements/Yellow/ButtonsMiddle [Hover]/Button-9.png" id="24_dub31"]
+[ext_resource type="Texture2D" uid="uid://j7gwiqbxcfat" path="res://assets/uielements/Yellow/ButtonsMiddle [Disabled]/Button-9.png" id="25_emjeb"]
+[ext_resource type="FontFile" uid="uid://o177wq3ovadd" path="res://assets/eracake-font/Eracake-e9jB3.otf" id="26_17t0n"]
+
+[node name="UI" type="CanvasLayer"]
+script = ExtResource("1_usla4")
+
+[node name="UIRight" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="UIRight"]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -170.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="Operators" type="VBoxContainer" parent="UIRight/MarginContainer"]
+y_sort_enabled = true
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+size_flags_stretch_ratio = 0.0
+mouse_default_cursor_shape = 2
+theme_override_constants/separation = 10
+
+[node name="PlusButton" type="TextureButton" parent="UIRight/MarginContainer/Operators"]
+layout_mode = 2
+texture_normal = ExtResource("2_x8tn3")
+texture_hover = ExtResource("3_xv41u")
+texture_disabled = ExtResource("4_pyjd3")
+
+[node name="MinusButton" type="TextureButton" parent="UIRight/MarginContainer/Operators"]
+layout_mode = 2
+texture_normal = ExtResource("5_nc06r")
+texture_hover = ExtResource("6_lqtkj")
+texture_disabled = ExtResource("7_fwcia")
+
+[node name="MultiplyButton" type="TextureButton" parent="UIRight/MarginContainer/Operators"]
+layout_mode = 2
+texture_normal = ExtResource("8_cpju5")
+texture_hover = ExtResource("9_81bp8")
+texture_disabled = ExtResource("10_b6fqr")
+
+[node name="DivideButton" type="TextureButton" parent="UIRight/MarginContainer/Operators"]
+layout_mode = 2
+texture_normal = ExtResource("11_ovjtt")
+texture_hover = ExtResource("12_hnswv")
+texture_disabled = ExtResource("13_n22tv")
+
+[node name="SquareButton" type="TextureButton" parent="UIRight/MarginContainer/Operators"]
+layout_mode = 2
+texture_normal = ExtResource("14_tkexi")
+texture_hover = ExtResource("15_81e3p")
+texture_disabled = ExtResource("16_nkn1w")
+
+[node name="CombineButton" type="TextureButton" parent="UIRight/MarginContainer/Operators"]
+layout_mode = 2
+texture_normal = ExtResource("17_55ayu")
+texture_hover = ExtResource("18_6e1r4")
+texture_disabled = ExtResource("19_rq33v")
+
+[node name="Menu" type="VBoxContainer" parent="UIRight/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+
+[node name="MenuButton" type="TextureButton" parent="UIRight/MarginContainer/Menu"]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+texture_normal = ExtResource("20_wwn7d")
+texture_hover = ExtResource("21_ppstp")
+texture_disabled = ExtResource("22_xhf5r")
+
+[node name="UILeft" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 9
+anchor_bottom = 1.0
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="UILeft"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="ResetButton" type="TextureButton" parent="UILeft/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("23_2lk1q")
+texture_hover = ExtResource("24_dub31")
+texture_disabled = ExtResource("25_emjeb")
+
+[node name="RemainingMoves" type="MarginContainer" parent="UILeft"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 40.0
+grow_vertical = 0
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="MovesLabel" type="Label" parent="UILeft/RemainingMoves"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.392157, 0, 1)
+theme_override_fonts/font = ExtResource("26_17t0n")
+theme_override_font_sizes/font_size = 30
+text = "Remaining Moves: <Int>"
+
+[node name="Level" type="MarginContainer" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+grow_horizontal = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="LevelLabel" type="Label" parent="Level"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.392157, 0, 1)
+theme_override_fonts/font = ExtResource("26_17t0n")
+theme_override_font_sizes/font_size = 40
+text = "Level <Number> :  <Title>"
+
+[node name="YourGoal" type="MarginContainer" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="GoalLabel" type="Label" parent="YourGoal"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.392157, 0, 1)
+theme_override_fonts/font = ExtResource("26_17t0n")
+theme_override_font_sizes/font_size = 30
+text = "Your Goal: <Int>"
+
+[connection signal="pressed" from="UIRight/MarginContainer/Operators/PlusButton" to="." method="_on_plus_button_pressed"]
+[connection signal="pressed" from="UIRight/MarginContainer/Operators/MinusButton" to="." method="_on_minus_button_pressed"]
+[connection signal="pressed" from="UIRight/MarginContainer/Operators/MultiplyButton" to="." method="_on_multiply_button_pressed"]
+[connection signal="pressed" from="UIRight/MarginContainer/Operators/DivideButton" to="." method="_on_divide_button_pressed"]
+[connection signal="pressed" from="UIRight/MarginContainer/Operators/SquareButton" to="." method="_on_square_button_pressed"]
+[connection signal="pressed" from="UIRight/MarginContainer/Operators/CombineButton" to="." method="_on_combine_button_pressed"]
