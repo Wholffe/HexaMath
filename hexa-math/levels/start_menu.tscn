@@ -1,0 +1,144 @@
+[gd_scene load_steps=4 format=3 uid="uid://d07t3trn4xbbk"]
+
+[ext_resource type="FontFile" uid="uid://cjnfi2jth0ccd" path="res://assets/eracake-font/Eracake-WpP3A.ttf" id="1_6nkkm"]
+[ext_resource type="Texture2D" uid="uid://dfvkeanbhxh8s" path="res://assets/uielements/Yellow/Bars2/Bar6.png" id="2_dguiw"]
+[ext_resource type="Texture2D" uid="uid://bg8vbfa4ow1rh" path="res://assets/uielements/Yellow/Bars2/Bar6Hover.png" id="3_xurkb"]
+
+[node name="StartMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -152.0
+offset_right = 152.0
+offset_bottom = 140.0
+grow_horizontal = 2
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_bottom = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+tooltip_text = "Continue
+"
+theme_override_constants/separation = 20
+
+[node name="Headline" type="Label" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.403922, 0, 1)
+theme_override_fonts/font = ExtResource("1_6nkkm")
+theme_override_font_sizes/font_size = 60
+text = "HexaMath"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Continue" type="CenterContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="MarginContainer/VBoxContainer/Continue"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+size_flags_stretch_ratio = 2.0
+button_mask = 0
+texture_normal = ExtResource("2_dguiw")
+texture_hover = ExtResource("3_xurkb")
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Continue"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_6nkkm")
+theme_override_font_sizes/font_size = 35
+text = "Continue"
+
+[node name="NewGame" type="CenterContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureButton2" type="TextureButton" parent="MarginContainer/VBoxContainer/NewGame"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+texture_normal = ExtResource("2_dguiw")
+texture_hover = ExtResource("3_xurkb")
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/NewGame"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_6nkkm")
+theme_override_font_sizes/font_size = 35
+text = "New Game
+"
+
+[node name="Levels" type="CenterContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="MarginContainer/VBoxContainer/Levels"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+size_flags_stretch_ratio = 2.0
+button_mask = 0
+texture_normal = ExtResource("2_dguiw")
+texture_hover = ExtResource("3_xurkb")
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Levels"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_6nkkm")
+theme_override_font_sizes/font_size = 35
+text = "Levels"
+
+[node name="Options" type="CenterContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="MarginContainer/VBoxContainer/Options"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+size_flags_stretch_ratio = 2.0
+button_mask = 0
+texture_normal = ExtResource("2_dguiw")
+texture_hover = ExtResource("3_xurkb")
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Options"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_6nkkm")
+theme_override_font_sizes/font_size = 35
+text = "Options"
+
+[node name="Credits" type="CenterContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="MarginContainer/VBoxContainer/Credits"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+size_flags_stretch_ratio = 2.0
+button_mask = 0
+texture_normal = ExtResource("2_dguiw")
+texture_hover = ExtResource("3_xurkb")
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Credits"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_6nkkm")
+theme_override_font_sizes/font_size = 35
+text = "Credits
+"
+
+[node name="Quit" type="CenterContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="MarginContainer/VBoxContainer/Quit"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+size_flags_stretch_ratio = 2.0
+button_mask = 0
+texture_normal = ExtResource("2_dguiw")
+texture_hover = ExtResource("3_xurkb")
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Quit"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_6nkkm")
+theme_override_font_sizes/font_size = 35
+text = "Quit"

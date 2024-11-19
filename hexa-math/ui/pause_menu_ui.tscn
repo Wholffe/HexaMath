@@ -1,0 +1,126 @@
+[gd_scene load_steps=5 format=3 uid="uid://biqqhxqg5wocu"]
+
+[ext_resource type="FontFile" uid="uid://cjnfi2jth0ccd" path="res://assets/eracake-font/Eracake-WpP3A.ttf" id="1_jmqdm"]
+[ext_resource type="Texture2D" uid="uid://dfvkeanbhxh8s" path="res://assets/uielements/Yellow/Bars2/Bar6.png" id="2_41ph6"]
+[ext_resource type="Texture2D" uid="uid://bg8vbfa4ow1rh" path="res://assets/uielements/Yellow/Bars2/Bar6Hover.png" id="3_s7gtr"]
+[ext_resource type="PackedScene" uid="uid://wcfmuu5ljo7w" path="res://ui/security_pop_up_ui.tscn" id="4_o0h0u"]
+
+[node name="PauseMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.494118)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+grow_horizontal = 2
+
+[node name="Headline" type="Label" parent="Control"]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+offset_left = -152.0
+offset_top = 40.0
+offset_right = 152.0
+offset_bottom = 140.0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(1, 0.403922, 0, 1)
+theme_override_fonts/font = ExtResource("1_jmqdm")
+theme_override_font_sizes/font_size = 60
+text = "HexaMath"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="OptionContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 2
+offset_left = -155.0
+offset_top = 232.0
+offset_right = 155.0
+offset_bottom = 516.0
+tooltip_text = "Continue
+"
+theme_override_constants/separation = 20
+
+[node name="Continue" type="CenterContainer" parent="Control/OptionContainer"]
+layout_mode = 2
+
+[node name="MenuButton" type="TextureButton" parent="Control/OptionContainer/Continue"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+size_flags_stretch_ratio = 2.0
+button_mask = 0
+texture_normal = ExtResource("2_41ph6")
+texture_hover = ExtResource("3_s7gtr")
+
+[node name="ContinueLabel" type="Label" parent="Control/OptionContainer/Continue"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_jmqdm")
+theme_override_font_sizes/font_size = 35
+text = "Continue"
+
+[node name="Options" type="CenterContainer" parent="Control/OptionContainer"]
+layout_mode = 2
+
+[node name="MenuButton" type="TextureButton" parent="Control/OptionContainer/Options"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+texture_normal = ExtResource("2_41ph6")
+texture_hover = ExtResource("3_s7gtr")
+
+[node name="OptionsLabel" type="Label" parent="Control/OptionContainer/Options"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_jmqdm")
+theme_override_font_sizes/font_size = 35
+text = "Options"
+
+[node name="RestartLevel" type="CenterContainer" parent="Control/OptionContainer"]
+layout_mode = 2
+
+[node name="MenuButton" type="TextureButton" parent="Control/OptionContainer/RestartLevel"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+size_flags_stretch_ratio = 2.0
+button_mask = 0
+texture_normal = ExtResource("2_41ph6")
+texture_hover = ExtResource("3_s7gtr")
+
+[node name="RestartLevelLabel" type="Label" parent="Control/OptionContainer/RestartLevel"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_jmqdm")
+theme_override_font_sizes/font_size = 35
+text = "Restart Level"
+
+[node name="QuitLevel" type="CenterContainer" parent="Control/OptionContainer"]
+layout_mode = 2
+
+[node name="MenuButton" type="TextureButton" parent="Control/OptionContainer/QuitLevel"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+size_flags_stretch_ratio = 2.0
+button_mask = 0
+texture_normal = ExtResource("2_41ph6")
+texture_hover = ExtResource("3_s7gtr")
+
+[node name="QuitLevelLabel" type="Label" parent="Control/OptionContainer/QuitLevel"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_jmqdm")
+theme_override_font_sizes/font_size = 35
+text = "Quit Level"
+
+[node name="securityPopUp" parent="." instance=ExtResource("4_o0h0u")]
+visible = false
+layout_mode = 1
